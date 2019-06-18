@@ -1,103 +1,100 @@
-* {
-	margin: 0;
-	padding: 0;
+/* Some CSS Setup - nothing to do with flexbox */
+html {
 	box-sizing: border-box;
-}
-
-body {
-	font-family: 'Montserrat', sans-serif;
-	line-height: 1.6;
-	margin: 1em;
-	min-height: 100vh;
-}
-
-.page-wrapper {
-	position: relative;
-}
-
-
-.header-img {
-	max-width: 500px;
+  }
+  
+  *, *:before, *:after {
+	box-sizing: inherit;
+  }
+  
+  body {
+	font-family: sans-serif;
+	margin: 0;
+	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  }
+  
+.header-image img {
 	width: 100%;
 	height: auto;
 }
 
-.header {
-	position: fixed;
-	top: 0;
-	min-height: 75px;
-	padding: 0px 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: white;
+  a {
+	color:white;
+	font-weight: 100;
+	letter-spacing: 2px;
+	text-decoration: none;
+	background:rgba(0,0,0,0.2);
+	padding:20px 5px;
+	display: inline-block;
 	width: 100%;
-	padding-bottom: 20px;
-	align-content: center;
+	text-align: center;
+	transition:all 0.5s;
+  }
+  
+  a:hover {
+	background:rgba(0,0,0,0.3);
+  }
+  
+.header {
+	display: flex;
 }
 
-.grid-container {
-	max-width: 1000px;
-	padding-top: 200px;
+.main-nav {
+	flex:2;
+}
+
+.header-image {
+	flex: 1;
+}
+
+  .page-wrapper {
+	max-width: 100vw;
 	margin: 0 auto;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 100px;
-	grid-template-areas:
-		"about about about"
-		"video video video"
-		"cards cards cards"
-		"footer footer footer";
-}
+	padding:50px;
+  }
 
-
-
-
-.main-nav > ul {
+  .main-nav ul {
+	border:1px solid black;
 	list-style: none;
-	justify-content: space-between;
-}
+	margin: 0;
+	padding: 0;
+	display:flex;
+  }
+  
 
+  .main-nav li {
+	flex:1;
+  }
+  
 
-
-.main-about {
-	grid-area: about;
-}
-
-.main-about-description {
-	flex-shrink: 0;
-}
-
-@media (min-width: 769px) {
-
-	.header,
-	.main-nav-links {
-		display: flex;
+  
+  
+  @media all and (max-width:1000px) {
+	
+	.main-nav ul {
+	  flex-wrap:wrap;
+	}
+  
+	.main-nav li {
+		flex:1 1 50%;
+	  }
+	
+	.header {
+		flex-wrap:wrap;
 	}
 	.main-nav {
-		justify-content: space-around;
-		width: 50%;
+		flex:1 1 100%;
 	}
-	.header {
-		flex-direction: column;
-		align-items: center;
+	.header-image {
+		flex:1 1 100%;
 	}
-	.grid-container {
-		padding-top: 65px;
+  
+  }
+  
+  @media all and (max-width:500px) {
+	
+	.main-nav li {
+	  flex-basis:100%;
 	}
-
-
-}
-
-
-
-@media (min-width: 1025px) {
-	.header {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.grid-container {
-		padding-top: 65px;
-	}
-}
+  
+  }
