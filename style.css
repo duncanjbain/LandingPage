@@ -1,100 +1,143 @@
 /* Some CSS Setup - nothing to do with flexbox */
 html {
 	box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
-  }
-  
-  body {
+}
+
+body {
 	font-family: sans-serif;
 	margin: 0;
 	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-  }
-  
-.header-image img {
-	width: 100%;
-	height: auto;
 }
 
-  a {
-	color:white;
+.header-image img {
+	height: 75px;
+	padding-bottom: 15px;
+
+}
+
+.header h1 {
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.nav-link {
+	color: white;
 	font-weight: 100;
 	letter-spacing: 2px;
 	text-decoration: none;
-	background:rgba(0,0,0,0.2);
-	padding:20px 5px;
+	background: rgba(0, 0, 0, 0.2);
+	padding: 10px 5px;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-	transition:all 0.5s;
-  }
-  
-  a:hover {
-	background:rgba(0,0,0,0.3);
-  }
-  
+	transition: all 0.5s;
+
+}
+
+.header-image-link  {
+	text-decoration:  none;
+}
+
+.main-nav-links a:hover {
+	background: rgba(0, 0, 0, 0.3);
+	
+}
+
 .header {
 	display: flex;
+	align-content: center;
+	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+	padding: 10px;
+	position: fixed;
+	width: 100vw;
+	right: 0px
+	
+
+}
+
+.header-image a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-image-link a {
+
 }
 
 .main-nav {
-	flex:2;
+	flex: 2;
+	align-self: center;
+	padding: 5px;
 }
 
 .header-image {
 	flex: 1;
 }
 
-  .page-wrapper {
+.page-wrapper {
 	max-width: 100vw;
 	margin: 0 auto;
-	padding:50px;
-  }
+}
 
-  .main-nav ul {
-	border:1px solid black;
+.main-nav ul {
+	border: 1px solid black;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display:flex;
-  }
-  
+	display: flex;
 
-  .main-nav li {
-	flex:1;
-  }
-  
+}
 
-  
-  
-  @media all and (max-width:1000px) {
-	
+
+.main-nav li {
+	flex: 1;
+}
+
+
+
+.call-to-action {
+	display: flex;
+}
+
+
+@media all and (max-width:1000px) {
+
 	.main-nav ul {
-	  flex-wrap:wrap;
+		flex-wrap: wrap;
 	}
-  
+
 	.main-nav li {
-		flex:1 1 50%;
-	  }
-	
+		flex: 1 1 50%;
+	}
+
 	.header {
-		flex-wrap:wrap;
+		flex-wrap: wrap;
 	}
+
 	.main-nav {
-		flex:1 1 100%;
+		flex: 1 1 100%;
 	}
+
 	.header-image {
-		flex:1 1 100%;
+		flex: 1 1 100%;
 	}
-  
-  }
-  
-  @media all and (max-width:500px) {
-	
+
+
+}
+
+@media all and (max-width:500px) {
+
 	.main-nav li {
-	  flex-basis:100%;
+		flex-basis: 100%;
 	}
-  
-  }
+
+
+}
