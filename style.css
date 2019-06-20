@@ -1,7 +1,10 @@
 /* Some CSS Setup - nothing to do with flexbox */
 html {
 	box-sizing: border-box;
+	height: 100%;
 }
+
+
 
 *,
 *:before,
@@ -14,6 +17,10 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	margin: 0;
 	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .header-image img {
@@ -33,7 +40,7 @@ body {
 	font-weight: 100;
 	letter-spacing: 2px;
 	text-decoration: none;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.4);
 	padding: 10px 5px;
 	display: inline-block;
 	width: 100%;
@@ -47,7 +54,7 @@ body {
 }
 
 .main-nav-links a:hover {
-	background: rgba(0, 0, 0, 0.3);
+	background: rgba(0, 0, 0, 0.7);
 	
 }
 .roundInput {
@@ -58,7 +65,12 @@ body {
 	display: flex;
 	align-content: center;
 	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-	padding: 10px;
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	padding: 5px;
+	padding-bottom: 1px;
 	position: fixed;
 	width: 100vw;
 	height: auto;
@@ -76,6 +88,7 @@ body {
 	flex: 2;
 	align-self: center;
 	padding: 5px;
+	padding-bottom: 0px;
 }
 
 .header-image {
@@ -130,10 +143,7 @@ body {
 }
 
 
-.mailing-form {
-	display: flex;
-	flex-direction: column;
-}
+
 
 .mailing-form  input {
   padding: 0.4em;
@@ -144,6 +154,23 @@ body {
 .roundInput {
 	border-radius: 5px;
   }
+
+
+  .card-container {
+	  margin: 0 auto;
+	  max-width: 80vw;
+  }
+
+  .cards {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 15px;
+ }
+
+    .card {
+		flex: 0 1 calc(25% - 1em);
+	}
 
 
 @media all and (max-width:1000px) {
@@ -170,7 +197,16 @@ body {
 	.page-wrapper {
 		padding-top: 250px;
 	}
-
+	.cards {
+	justify-content: space-between;
+	}
+	.card {
+		flex: 0 1 calc(33% - 1em);
+	}
+		.card-container {
+			margin: 0 auto;
+			max-width: 100vw;
+		}
 }
 
 @media all and (max-width:500px) {
@@ -186,4 +222,13 @@ body {
 		width: auto;
 	}
 
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .card {
+		flex: 0 1 100%;
+    }
 }
