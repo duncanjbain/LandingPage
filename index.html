@@ -20,8 +20,8 @@
             </div>
             <nav class="main-nav" id="nav-bar">
                 <ul class="main-nav-links">
-                    <li><a class="nav-link" href="test1.html">Home</a></li>
-                    <li><a class="nav-link" href="test1.html">Our Beer</a></li>
+                    <li><a class="nav-link" href="#page-home">Home</a></li>
+                    <li><a class="nav-link" href="#our-devices">Our Devices</a></li>
                     <li><a class="nav-link" href="test1.html">Our Process</a></li>
                     <li><a class="nav-link" href="test1.html">Order</a></li>
                 </ul>
@@ -29,33 +29,36 @@
         </header>
     </div>
 
-    <div class="page-wrapper">
+    <div class="page-wrapper" id="page-home">
         <section class="call-to-action">
             <img src="img/pint.svg" alt="Pint Logo">
             <h2>Hand Crafted Beer - Join our mailing list!</h2>
             <form id="form" class="mailing-form" action=" https://www.freecodecamp.com/email-submit">
-                <input type="email" id="email" placeholder="Sign up" required class="roundInput"/ name="email-submit">
+                <input type="email" id="email" placeholder="Sign up" required class="roundInput"/ name="email">
                 <input type="submit" id="submit" class="inputButton roundInput" value="Sign Up" />
             </form>
         </section>
 
-        <div class="card-container">
-        <section class="cards">
+        <div class="card-container" id="our-devices">
+            <section class="cards">
 
-            <article class="card">
-                <p>content for card one</p>
-            </article><!-- /card-one -->
+                <article class="card">
+                    <img src="img/rpi.svg" alt="Pint Logo" class="card-img">
+                    <p>content for card one</p>
+                </article>
 
-            <article class="card">
-                <p>content for card two</p>
-            </article><!-- /card-two -->
+                <article class="card">
+                    <img src="img/arduino.svg" alt="Pint Logo" class="card-img">
+                    <p>content for card two</p>
+                </article>
 
-            <article class="card">
-                <p>content for card three</p>
-            </article><!-- /card-three -->
+                <article class="card">
+                    <img src="img/rpi.svg" alt="Pint Logo" class="card-img">
+                    <p>content for card three</p>
+                </article>
 
-        </section>
-    </div>
+            </section>
+        </div>
     </div>
 
 

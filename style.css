@@ -14,19 +14,18 @@ html {
 
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	margin: 0;
 	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 	height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 .header-image img {
-	height: 75px;
-	padding-bottom: 15px;
-
+	height: 5rem;
+	width: auto;
 }
 
 .header h1 {
@@ -41,7 +40,7 @@ body {
 	letter-spacing: 2px;
 	text-decoration: none;
 	background: rgba(0, 0, 0, 0.4);
-	padding: 10px 5px;
+	padding: 1em 0.5em;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
@@ -49,32 +48,34 @@ body {
 
 }
 
-.header-image-link  {
-	text-decoration:  none;
+.header-image-link {
+	text-decoration: none;
 }
 
 .main-nav-links a:hover {
 	background: rgba(0, 0, 0, 0.7);
-	
+
 }
+
 .roundInput {
-  border-radius: 5px;
-  
+	border-radius: 5px;
+
 }
+
 .header {
 	display: flex;
 	align-content: center;
 	background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 	height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	padding: 5px;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding-top: 1em;
 	padding-bottom: 1px;
 	position: fixed;
-	width: 100vw;
+	width: 100%;
+	margin: 0 auto;
 	height: auto;
-
 }
 
 .header-image a {
@@ -87,7 +88,7 @@ body {
 .main-nav {
 	flex: 2;
 	align-self: center;
-	padding: 5px;
+	padding: 1em;
 	padding-bottom: 0px;
 }
 
@@ -97,12 +98,12 @@ body {
 
 
 .nav-wrapper {
-	max-width: 100vw;
+	max-width: 100%;
 	margin: 0 auto;
 }
 
 .page-wrapper {
-	max-width: 100vw;
+	max-width: 100%;
 	margin: 0 auto;
 	padding-top: 150px;
 }
@@ -145,36 +146,51 @@ body {
 
 
 
-.mailing-form  input {
-  padding: 0.4em;
-  border: 1px;
-  border-style: solid;
+.mailing-form input {
+	padding: 0.4em;
+	border: 1px;
+	border-style: solid;
 }
 
 .roundInput {
 	border-radius: 5px;
-  }
+}
 
 
-  .card-container {
-	  margin: 0 auto;
-	  max-width: 80vw;
-  }
+.card-container {
+	margin: 0 auto;
 
-  .cards {
+	padding-top: 2rem;
+}
+
+.cards {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 15px;
- }
+	padding: 1em;
+}
 
-    .card {
-		flex: 0 1 calc(25% - 1em);
-	}
+.card {
+	flex: 0 1 30%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+	transition: 0.3s;
+}
+
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.card img {
+	width: 100%;
+}
 
 
 @media all and (max-width:1000px) {
 
+	.nav-link {
+		padding: 0.2em 0.1em;
+	}
 	.main-nav ul {
 		flex-wrap: wrap;
 	}
@@ -187,6 +203,28 @@ body {
 		flex-wrap: wrap;
 	}
 
+
+
+	.page-wrapper {
+		padding-top: 250px;
+	}
+
+	.cards {
+		justify-content: space-between;
+	}
+
+	.card {
+		flex: 0 1 30%;
+	}
+
+	.card-container {
+		margin: 0 auto;
+		max-width: 100vw;
+	}
+}
+
+@media all and (max-width:500px) {
+
 	.main-nav {
 		flex: 1 1 100%;
 	}
@@ -194,41 +232,30 @@ body {
 	.header-image {
 		flex: 1 1 100%;
 	}
-	.page-wrapper {
-		padding-top: 250px;
-	}
-	.cards {
-	justify-content: space-between;
-	}
-	.card {
-		flex: 0 1 calc(33% - 1em);
-	}
-		.card-container {
-			margin: 0 auto;
-			max-width: 100vw;
-		}
-}
-
-@media all and (max-width:500px) {
 
 	.main-nav li {
 		flex-basis: 100%;
 	}
+
 	.page-wrapper {
-		padding-top: 300px;
+		padding-top: 23em;
 	}
-	
+
 	.header {
 		width: auto;
 	}
 
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
- 
-    .card {
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.card {
 		flex: 0 1 100%;
-    }
+	}
+
+	.cards > * {
+		margin: 1em 0;
+	  }
 }
