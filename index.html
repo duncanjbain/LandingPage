@@ -1,72 +1,66 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCC Landing Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <div class="nav-wrapper">
-        <header id="header" class="header">
-            <div class="header-image" id="header">
-                <a href="index.html" class="header-image-link">
-                    <img src="img/pint.svg" alt="Pint Logo" id="header-img">
-                    <h1>Craft Beer!</h1>
-                </a>
-
-            </div>
-            <nav class="main-nav" id="nav-bar">
-                <ul class="main-nav-links">
-                    <li><a class="nav-link" href="#page-home">Home</a></li>
-                    <li><a class="nav-link" href="#our-devices">Our Devices</a></li>
-                    <li><a class="nav-link" href="#video-link">Our Process</a></li>
-                    <li><a class="nav-link" href="#contact">Order</a></li>
-                </ul>
-            </nav>
-        </header>
+      <header id="header" class="header">
+        <div class="header-image" id="header">
+          <a href="index.html" class="header-image-link">
+            <img src="img/pint.svg" alt="Pint Logo" id="header-img" />
+            <h1>Craft Beer!</h1>
+          </a>
+        </div>
+        <nav class="main-nav" id="nav-bar">
+          <ul class="main-nav-links">
+            <li><a class="nav-link" href="#page-home">Home</a></li>
+            <li><a class="nav-link" href="#our-devices">Our Devices</a></li>
+            <li><a class="nav-link" href="#video-link">Our Process</a></li>
+            <li><a class="nav-link" href="#contact">Order</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
 
     <div class="page-wrapper" id="page-home">
-        <section class="call-to-action">
-            <img src="img/pint.svg" alt="Pint Logo">
-            <h2>Hand Crafted Beer - Join our mailing list!</h2>
-            <form id="form" class="mailing-form" action=" https://www.freecodecamp.com/email-submit">
-                <input type="email" id="email" placeholder="Sign up" required class="roundInput"/ name="email">
-                <input type="submit" id="submit" class="inputButton roundInput" value="Sign Up" />
-            </form>
+      <section class="call-to-action">
+        <img src="img/pint.svg" alt="Pint Logo" />
+        <h2>Hand Crafted Beer - Join our mailing list!</h2>
+        <form id="form" class="mailing-form" action=" https://www.freecodecamp.com/email-submit">
+          <input type="email" id="email" placeholder="Sign up" required class="roundInput"/ name="email">
+          <input type="submit" id="submit" class="inputButton roundInput" value="Sign Up" />
+        </form>
+      </section>
+
+      <div class="card-container" id="our-devices">
+        <section class="cards">
+          <article class="card">
+            <img src="img/rpi.svg" alt="Pint Logo" class="card-img" />
+            <p>content for card one</p>
+          </article>
+
+          <article class="card">
+            <img src="img/arduino.svg" alt="Pint Logo" class="card-img" />
+            <p>content for card two</p>
+          </article>
+
+          <article class="card">
+            <img src="img/rpi.svg" alt="Pint Logo" class="card-img" />
+            <p>content for card three</p>
+          </article>
         </section>
+      </div>
 
-        <div class="card-container" id="our-devices">
-            <section class="cards">
-
-                <article class="card">
-                    <img src="img/rpi.svg" alt="Pint Logo" class="card-img">
-                    <p>content for card one</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/arduino.svg" alt="Pint Logo" class="card-img">
-                    <p>content for card two</p>
-                </article>
-
-                <article class="card">
-                    <img src="img/rpi.svg" alt="Pint Logo" class="card-img">
-                    <p>content for card three</p>
-                </article>
-            </section>
-        </div>
-
-        <section class="video">
-                <iframe src="https://player.vimeo.com/video/90103691"  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        </section>
+      <section class="video">
+        <iframe src="https://player.vimeo.com/video/90103691" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </section>
     </div>
-
-
-</body>
-<footer>
-</footer>
-
+  </body>
+  <footer></footer>
 </html>
