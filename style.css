@@ -168,16 +168,26 @@ body {
   width: 100%;
 }
 
-.video {
+
+.video-container {
+  width: 80vw;
   margin: 0 auto;
-  width: 500px;
-  padding-top: 2rem;
 }
 
-.video iframe {
-  width: 500px;
-  height: 281px;
+.video{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
 }
+.video iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
 
 @media all and (max-width: 1000px) {
   .nav-link {
@@ -248,13 +258,9 @@ body {
     margin: 1em 0;
   }
 
-  .video {
-    margin: 0 auto;
-    width: 100%;
-  }
 
-  .video iframe {
-    width: 100%;
-    height: auto;
+  .video-container {
+    width: 90vw;
+    margin: 0 auto;
   }
 }
